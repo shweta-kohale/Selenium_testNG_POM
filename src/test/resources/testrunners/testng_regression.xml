@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite" thread-count="2" parallel="tests"
+	verbose="4">
+	
+	<listeners>
+		<listener
+			class-name="com.qa.ecommerce.listeners.TestAllureListener" />
+
+	</listeners>
+
+	<test name="Home Page Test">
+		<classes>
+			<class name="com.qa.ecommerce.test.HomePageTest" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Login Page Test">
+		<classes>
+			<class name="com.qa.ecommerce.test.LoginPageTest" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Accounts Page Test">
+		<classes>
+			<class name="com.qa.ecommerce.test.AccountPageTest" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Search Results Page Test">
+		<classes>
+			<class name="com.qa.ecommerce.test.SearchResultsPageTest" />
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="PDP Page Test">
+		<classes>
+			<class name="com.qa.ecommerce.test.ProductDetailsPageTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
