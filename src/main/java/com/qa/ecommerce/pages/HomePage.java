@@ -6,11 +6,6 @@ import org.openqa.selenium.support.ui.Select;
 
 public class HomePage {
 
-	
-	//1. locator
-	//2. constr
-	//3. actions
-	
 	private WebDriver driver;
 	private By myAccount = By.linkText("My Account");
 	private By login = By.linkText("Login");
