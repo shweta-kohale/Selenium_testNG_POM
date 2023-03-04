@@ -1,7 +1,11 @@
 package com.qa.ecommerce.pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage {
 
@@ -21,7 +25,9 @@ public class LoginPage {
 	}
 	
 	public String getLoginPageFormText() {
-		return driver.findElement(loginFormText).getText();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		return wait.until(ExpectedConditions.presenceOfElementLocated(loginFormText)).getText();
+		//return driver.findElement(loginFormText).getText();
 	}
 	
 	public Boolean isForgotPasswordLink() {
